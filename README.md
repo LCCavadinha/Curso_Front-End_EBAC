@@ -1,2 +1,3 @@
 # Curso_Front-End_EBAC
-Repositório com a finalidade de teste e aprendizado
+
+- Repositório com a finalidade de teste e aprendizado
