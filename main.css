@@ -1,9 +1,91 @@
-h1{
-    color:rgb(8, 83, 8);
+/* Usamos essa propriedade para deixar o arquivo html em um tamnho padrão
+Com a propriedade Boder-box  o tamanho do elemento é calculado a partir do conteúdo interno,
+incluindo as bordas e o preenchimento.*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-h2{
-    color: rgb(40, 7, 71);
+/* Esse seletor serve para deixar os artigos da header na mesma linha através do comando display: inline. */
+header li {
+    display: inline;
+}
+header li a {
+    color: white;
+}
+/*  Esse comando serve para ajustar o espaçamento dos artigos do site criando uma tag div e nomeando a class como container.
+    Para que a alteração dentro do seleto funcione devemos sempre usar o nome do class que criamos e desejamos alterar ex: .container { alteração }  */
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+/*  - Neste comando através da tag div class="articles" coloca os artigos lado a lado por seção através do comando display: flex;.
+    - O artigo em questão está com 3 notícias, caso eu queira adicionar mais uma notícia e que ela fique enaquadarada dentro da página só que na linha de baixo
+uso o comando flex-wrap: wrap; dentro do seletor articles.
+    - Para que o espaço seja distribuído por igual entre os artigos usamos o comando justify-content: espace-beteween   */
+.articles{
+    display: flex;
+    justify-content: space-between;
+}
+.articles article img{
+    height: 272px;
+}
+.articles article{
+    width: 30%;
+}
+
+h1{
+    color: white;
+    border: solid;
+    font-size: 50px;
+}
+h2 {
+    color:white;
+    border: solid;
+    font-size: 40px;
 }
 h3{
-    color: rgb(196, 196, 3);
+    color: black;
+    font-size: 30px;
+}
+/* Para selecionarmos um elemento por sua id usamos #nomedaid */
+/* O Id só pode ter uma seção única na página, é usado em um caso mais específico, se quisermos alterar mais de um arquivo usamos classe */
+#economy h2{
+    color: gold;
+    background-color: green;
+}
+/* Para selecionarmos um elemento por sua classe usamos .nomedaclasse */
+.creation-date{
+    color: #ccc;
+}
+/* Usando o seletor asterisco(*) ele vai selecionar todos os textos da página que não foram específicados*/
+/* Para mudarmos a cor de fundo dos artigos usamos os seletore referentes aos que desejamos mudar a cor, caso seja um seletor específico devemos
+selecionar o seletor principal e o secundário, ex: body > header{}, article > p, article > header */
+body > header {
+    background-color:  rgb(40, 7, 71);
+    padding: 16px 0;
+}
+article > header {
+    background-color: black;
+}
+article > p {
+    color: white;
+    background-color: red;
+    text-align: justify;
+}
+article > h3 {
+    background-color: red;
+}
+body{
+    background-color: blueviolet;
+}
+article > a {
+    background-color: white;
+}
+div > h2 {
+    background-color: rgb(40, 7, 71);
+}
+.articles article p,
+article a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
