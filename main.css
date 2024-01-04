@@ -6,15 +6,25 @@ incluindo as bordas e o preenchimento.*/
     margin: 0;
     padding: 0;
 }
+body > header {
+    background-color: white;
+    padding: 16px 0;
+    color: black;
+    font-size: 25px;
+    font-family: monospace;
+}
 /* Esse seletor serve para deixar os artigos da header na mesma linha através do comando display: inline. */
 header li {
     display: inline;
+    margin-right: 30px;
+    text-align: center;
 }
 header li a {
-    color: white;
+    color: black;
+    font-size: 25px;
 }
 /*  Esse comando serve para ajustar o espaçamento dos artigos do site criando uma tag div e nomeando a class como container.
-    Para que a alteração dentro do seleto funcione devemos sempre usar o nome do class que criamos e desejamos alterar ex: .container { alteração }  */
+    Para que a alteração dentro do seletor funcione devemos sempre usar o nome do class que criamos e desejamos alterar ex: .container { alteração }  */
 .container {
     width: 1366px;
     margin: 0 auto;
@@ -29,63 +39,71 @@ uso o comando flex-wrap: wrap; dentro do seletor articles.
 }
 .articles article img{
     height: 272px;
+    margin-top: 8px;
 }
 .articles article{
     width: 30%;
 }
-
-h1{
-    color: white;
-    border: solid;
-    font-size: 50px;
-}
-h2 {
-    color:white;
-    border: solid;
-    font-size: 40px;
-}
-h3{
-    color: black;
-    font-size: 30px;
-}
-/* Para selecionarmos um elemento por sua id usamos #nomedaid */
-/* O Id só pode ter uma seção única na página, é usado em um caso mais específico, se quisermos alterar mais de um arquivo usamos classe */
-#economy h2{
-    color: gold;
-    background-color: green;
-}
-/* Para selecionarmos um elemento por sua classe usamos .nomedaclasse */
-.creation-date{
-    color: #ccc;
-}
-/* Usando o seletor asterisco(*) ele vai selecionar todos os textos da página que não foram específicados*/
-/* Para mudarmos a cor de fundo dos artigos usamos os seletore referentes aos que desejamos mudar a cor, caso seja um seletor específico devemos
-selecionar o seletor principal e o secundário, ex: body > header{}, article > p, article > header */
-body > header {
-    background-color:  rgb(40, 7, 71);
+section{
     padding: 16px 0;
 }
-article > header {
-    background-color: black;
+#sports{
+    background-color:rgba(161, 161, 161, 0.681);
+    font-family: cursive;
 }
-article > p {
-    color: white;
-    background-color: red;
+#sports h2{
+    color:black;
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+#sports .articles article p{
+    color: black;
     text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-article > h3 {
-    background-color: red;
+#sports h3{
+    color: black;
+    font-size: 25px;
 }
-body{
-    background-color: blueviolet;
+#sports article a {
+    background-color: black;
+    color: white;
+    padding: 6px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-article > a {
-    background-color: white;
+#sports .articles article a:hover {
+    text-decoration: underline;
 }
-div > h2 {
-    background-color: rgb(40, 7, 71);
+#economy{
+    background-color: rgba(13, 164, 13, 0.356);
+    font-family: cursive;
 }
-.articles article p,
-article a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#economy h2{
+    color: rgb(8, 103, 30);
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+#economy .articles article p{
+    color: black;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#economy h3{
+    color: black;
+    font-size: 25px;
+}
+#economy article a {
+    background-color: rgba(13, 164, 13, 0.356);
+    color:black;
+    padding: 6px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#economy .articles article a:hover {
+    text-decoration: underline;
 }
